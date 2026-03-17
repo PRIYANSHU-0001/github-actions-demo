@@ -2,7 +2,7 @@ name: Node CI Demo
 on: [push]
 jobs: 
     build:
-        runs-on: [ubuntu-latest , window-latest]
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout code
@@ -15,3 +15,9 @@ jobs:
 
             - name: run Application
               run: node index.js
+
+            - name: install dependencies
+              run: npm install
+
+            - name: Run Test
+              run: npm test
